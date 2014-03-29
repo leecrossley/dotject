@@ -9,7 +9,7 @@ module.exports = function (grunt) {
             tasks: "test"
         },
         jasmine: {
-            src: "froute-picker.js",
+            src: "dotject.js",
             options: {
                 specs: "*-spec.js",
                 vendor: "node_modules/functional.js/functional.min.js"
