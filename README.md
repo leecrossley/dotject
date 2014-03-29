@@ -14,6 +14,20 @@ var dotject = require("dotject");
 
 ## Example
 
+#### Create
+
 ```javascript
-// TODO
+dotject.create("a.b.c");
+
+{
+  "a": {
+    "b": {
+      "c": {}
+    }
+  }
+}
+
 ```
+## License
+
+[MIT License](http://ilee.mit-license.org)
