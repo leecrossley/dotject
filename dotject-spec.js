@@ -23,4 +23,12 @@ describe("dotject", function() {
         expect(JSON.stringify(ab)).toEqual('{"a":{},"b":{},"c":{}}');
     });
 
+    it("should create objects with nested and same level properties", function() {
+        var abc = dotject.create("a,b.c");
+        var abcd = dotject.create("a.b,c.d");
+
+        expect(JSON.stringify(abc)).toEqual('{"a":{},"b":{"c":{}}');
+        expect(JSON.stringify(abcd)).toEqual('{"a":{"b":{}},"c":{"d":{}}');
+    });
+
 });
