@@ -14,7 +14,7 @@ var dotject = require("dotject");
 
 ## Examples
 
-### Create a object
+### Create an object
 
 #### Simple nested properties
 
