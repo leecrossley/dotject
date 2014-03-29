@@ -28,6 +28,12 @@ dotject.create("a.b.c");
 }
 
 ```
+
+## TODO
+
+- Assign value
+- Extend existing objects
+
 ## License
 
 [MIT License](http://ilee.mit-license.org)
