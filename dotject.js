@@ -10,16 +10,15 @@ var dotject = (function () {
         return (iterator[prop] = {});
     });
 
-    dotject.create = λ.curry(function (props) {
-        var obj = {}, iterator = obj;
-        λ.each(function (prop) {
-            addProps(iterator, prop.split("."));
-        }, props.split(","));
+    return function (str, obj) {
+        obj = obj || {};
+        var iterator = obj;
+        λ.each(function (props) {
+            addProps(iterator, props.split("."));
+        }, str.split(","));
 
         return obj;
-    });
-
-    return dotject;
+    };
 })();
 
 if (typeof (module) !== "undefined" && module.exports) {

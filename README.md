@@ -14,14 +14,14 @@ var dotject = require("dotject");
 
 ## Examples
 
-### Create
+### New object
 
-### Simple nested properties
+#### Simple nested properties
 
 Separating property names with dots (like JavaScript dot notation) will create nested objects:
 
 ```javascript
-dotject.create("a.b.c");
+dotject("a.b.c");
 
 {
   "a": {
@@ -33,12 +33,12 @@ dotject.create("a.b.c");
 
 ```
 
-### Properties at the same level
+#### Properties at the same level
 
 Separating property names with a comma (similar to JavaScript objects) will create properties at the same level:
 
 ```javascript
-dotject.create("a,b");
+dotject("a,b");
 
 {
   "a": {},
@@ -50,7 +50,7 @@ dotject.create("a,b");
 This notation can be combined with the dot style notation:
 
 ```javascript
-dotject.create("a,b.c");
+dotject("a,b.c");
 
 {
   "a": {},
