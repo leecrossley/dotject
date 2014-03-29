@@ -14,7 +14,7 @@ var dotject = require("dotject");
 
 ## Examples
 
-### New object
+### Create a object
 
 #### Simple nested properties
 
@@ -61,10 +61,53 @@ dotject("a,b.c");
 
 ```
 
+### Extend an existing object
+
+Extend an existing object with new properties by passing the existing object as a second (optional) argument:
+
+```javascript
+dotject("b.c", {"a":{}});
+
+{
+  "a": {},
+  "b": {
+    "c": {}
+  }
+}
+
+```
+
+Existing object values are retained:
+
+```javascript
+dotject("b.c", {"a": true});
+
+{
+  "a": true,
+  "b": {
+    "c": {}
+  }
+}
+
+```
+
+Existing nested object properties are retained:
+
+```javascript
+dotject("a.c", {"a":{"b":{}}});
+
+{
+  "a": {
+    "b": {},
+    "c": {}
+  }
+}
+
+```
+
 ## TODO
 
 - Assign value
-- Extend existing objects
 
 ## License
 

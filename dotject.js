@@ -7,7 +7,7 @@ var dotject = (function () {
     var dotject = {};
 
     var addProps = λ.reduce(function (iterator, prop) {
-        return (iterator[prop] = {});
+        return (iterator[prop] = iterator[prop] || {});
     });
 
     return function (str, obj) {
