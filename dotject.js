@@ -12,7 +12,9 @@ var dotject = (function () {
 
     dotject.create = λ.curry(function (props) {
         var obj = {}, iterator = obj;
-        addProps(iterator, props.split("."));
+        λ.each(function (prop) {
+            addProps(iterator, prop.split("."));
+        }, props.split(","));
 
         return obj;
     });
