@@ -5,10 +5,12 @@ describe("dotject", function() {
         expect(λ).not.toBeNull();
     });
 
-    it("should create the most basic of objects", function() {
-        var simple = dotject.create("really.simple");
+    it("should create simple objects", function() {
+        var simple = dotject.create("simple");
+        var simpleish = dotject.create("simple.ish");
 
-        expect(simple).toEqual("{ really: { simple } }");
+        expect(JSON.stringify(simple)).toEqual('{"simple":{}}');
+        expect(JSON.stringify(simpleish)).toEqual('{"simple":{"ish":{}}}');
     });
 
 });

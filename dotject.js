@@ -8,10 +8,11 @@ var dotject = (function () {
 
     dotject.create = λ.curry(function (dots) {
         var created = {};
+        var last = created;
         var props = dots.split(".");
 
         λ.each(function (prop) {
-            created = created[prop] = {};
+            last = last[prop] = {};
         }, props);
 
         return created;
