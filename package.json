@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Dot notation to object.",
   "homepage": "http://ilee.co.uk",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "main": "dotject.js",
   "keywords": [
     "dot notation",

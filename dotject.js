@@ -6,13 +6,15 @@ var dotject = (function () {
     "use strict";
     var dotject = {};
 
-    var addProps = λ.reduce(function (arg1, arg2) {
-        return (arg1[arg2] = {});
+    var addProps = λ.reduce(function (iterator, prop) {
+        return (iterator[prop] = {});
     });
 
     dotject.create = λ.curry(function (props) {
-        var obj = {};
-        return addProps(obj, props.split("."));
+        var obj = {}, iterator = obj;
+        addProps(iterator, props.split("."));
+
+        return obj;
     });
 
     return dotject;

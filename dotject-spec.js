@@ -6,11 +6,13 @@ describe("dotject", function() {
     });
 
     it("should create simple objects", function() {
-        var simple = dotject.create("simple");
-        var simpleish = dotject.create("simple.ish");
+        var a = dotject.create("a");
+        var ab = dotject.create("a.b");
+        var abc = dotject.create("a.b.c");
 
-        expect(JSON.stringify(simple)).toEqual('{"simple":{}}');
-        expect(JSON.stringify(simpleish)).toEqual('{"simple":{"ish":{}}}');
+        expect(JSON.stringify(a)).toEqual('{"a":{}}');
+        expect(JSON.stringify(ab)).toEqual('{"a":{"b":{}}}');
+        expect(JSON.stringify(abc)).toEqual('{"a":{"b":{"c":{}}}}');
     });
 
 });
