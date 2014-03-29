@@ -5,16 +5,20 @@
 ### Using npm
 
 ```
-npm install dotject
+npm install dotject --save
 ```
 
 ```
 var dotject = require("dotject");
 ```
 
-## Example
+## Examples
 
-#### Create
+### Create
+
+### Simple nested properties
+
+Separating property names with dots (like JavaScript dot notation) will create nested objects:
 
 ```javascript
 dotject.create("a.b.c");
@@ -24,6 +28,34 @@ dotject.create("a.b.c");
     "b": {
       "c": {}
     }
+  }
+}
+
+```
+
+### Properties at the same level
+
+Separating property names with a comma (similar to JavaScript objects) will create properties at the same level:
+
+```javascript
+dotject.create("a,b");
+
+{
+  "a": {},
+  "b": {}
+}
+
+```
+
+This notation can be combined with the dot style notation:
+
+```javascript
+dotject.create("a,b.c");
+
+{
+  "a": {},
+  "b": {
+    "c": {}
   }
 }
 
