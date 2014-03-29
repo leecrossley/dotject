@@ -6,16 +6,13 @@ var dotject = (function () {
     "use strict";
     var dotject = {};
 
-    dotject.create = λ.curry(function (dots) {
-        var created = {};
-        var last = created;
-        var props = dots.split(".");
+    var addProps = λ.reduce(function (arg1, arg2) {
+        return (arg1[arg2] = {});
+    });
 
-        λ.each(function (prop) {
-            last = last[prop] = {};
-        }, props);
-
-        return created;
+    dotject.create = λ.curry(function (props) {
+        var obj = {};
+        return addProps(obj, props.split("."));
     });
 
     return dotject;
