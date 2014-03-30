@@ -6,7 +6,7 @@ var dotject = (function () {
     "use strict";
 
     var addProps = λ.reduce(function (iterator, prop) {
-        return (iterator[prop[0]] = prop[1] || iterator[prop[0]] || {});
+        return (iterator[prop[0]] = iterator[prop[0]] || prop[1]);
     });
 
     return function (str, obj, val) {
