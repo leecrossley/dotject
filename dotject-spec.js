@@ -45,4 +45,14 @@ describe("dotject", function() {
         expect(JSON.stringify(extendVal)).toEqual('{"a":true,"b":{"c":{}}}');
     });
 
+    it("should create objects with nested properties and single value", function() {
+        var a = dotject("a", {}, true);
+        var ab = dotject("a.b", {}, 10);
+        var abc = dotject("a.b.c", {}, "test");
+
+        expect(JSON.stringify(a)).toEqual('{"a":true}');
+        expect(JSON.stringify(ab)).toEqual('{"a":{"b":10}}');
+        expect(JSON.stringify(abc)).toEqual('{"a":{"b":{"c":"test"}}}');
+    });
+
 });

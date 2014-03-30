@@ -9,11 +9,16 @@ var dotject = (function () {
         return (iterator[prop] = iterator[prop] || {});
     });
 
-    return function (str, obj) {
+    return function (str, obj, val) {
         obj = obj || {};
         var iterator = obj;
+        var last;
+
         λ.each(function (props) {
-            addProps(iterator, props.split("."));
+            props = props.split(".");
+            last = props.pop();
+            iterator = addProps(iterator, props);
+            iterator[last] = typeof (val) !== "undefined" ? val : {};
         }, str.split(","));
 
         return obj;
