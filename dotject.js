@@ -6,23 +6,15 @@ var dotject = (function () {
     "use strict";
 
     var addProps = λ.reduce(function (iterator, prop) {
-        return (iterator[prop[0]] = iterator[prop[0]] || prop[1]);
+        return (iterator[prop] = iterator[prop] || {});
     });
 
     return function (str, obj, val) {
         obj = obj || {};
         var iterator = obj;
-        var props;
 
-        λ.each(function (keys) {
-            keys = keys.split(".");
-            props = λ.map(function (key, i) {
-                if (i < keys.length - 1) {
-                    return [key, typeof (val) !== "undefined" ? val : {}];
-                }
-                return [key, {}];
-            }, keys);
-            addProps(iterator, props);
+        λ.each(function (keys, i) {
+            addProps(iterator, keys.split("."));
         }, str.split(","));
 
         return obj;
