@@ -105,9 +105,24 @@ dotject("a.c", {"a":{"b":{}}});
 
 ```
 
+### Assign a value
+
+You can assign a value to the "last property":
+
+```javascript
+dotject("a.b", {}, 10);
+
+{
+  "a": {
+    "b": 10
+  }
+}
+
+```
+
 ## TODO
 
-- Assign value
+- Assign multiple values
 
 ## License
 
