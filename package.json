@@ -3,11 +3,15 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Dot notation to object.",
   "homepage": "http://ilee.co.uk",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "main": "dotject.js",
   "keywords": [
     "dot notation",
-    "object"
+    "shortcode",
+    "object",
+    "json",
+    "assignment",
+    "value"
   ],
   "scripts": {
     "test": "grunt test"
