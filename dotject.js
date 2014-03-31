@@ -12,9 +12,13 @@ var dotject = (function () {
     return function (str, obj, val) {
         obj = obj || {};
         var iterator = obj;
+        var lastKey;
+        var lastIteration;
 
         λ.each(function (keys, i) {
-            addProps(iterator, keys.split("."));
+            keys = keys.split(".");
+            lastKey = keys.pop();
+            addProps(iterator, keys)[lastKey] = val || {};
         }, str.split(","));
 
         return obj;
