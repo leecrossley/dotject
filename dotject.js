@@ -13,7 +13,6 @@ var dotject = (function () {
         obj = obj || {};
         var iterator = obj;
         var lastKey;
-        var lastIteration;
 
         λ.each(function (keys, i) {
             keys = keys.split(".");
