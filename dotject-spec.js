@@ -59,8 +59,8 @@ describe("dotject", function() {
         var abc = dotject("a,b.c", {}, 10, "test");
         var abcd = dotject("a,b.c,d", {}, 10, "test", Infinity);
 
-        expect(JSON.stringify(abc)).toEqual('{"a":{},"b":{"c":{}}}');
-        expect(JSON.stringify(abcd)).toEqual('{"a":{"b":{}},"c":{"d":{}}}');
+        expect(JSON.stringify(abc)).toEqual('{"a":10,"b":{"c":"test"}}');
+        expect(JSON.stringify(abcd)).toEqual('{"a":10,"b":{"c":"test"},"d":Infinity}');
     });
 
 });
