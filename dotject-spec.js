@@ -63,4 +63,12 @@ describe("dotject", function() {
         expect(JSON.stringify(abcd)).toEqual('{"a":true,"b":{"c":10},"d":"test"}');
     });
 
+    it("should extend objects with multiple values", function() {
+        var extended1 = dotject("b.c", {"a": true}, 10);
+        var extended2 = dotject("b.c,d", {"a": true}, 10, "test");
+
+        expect(JSON.stringify(extended1)).toEqual('{"a":true,"b":{"c":10}}');
+        expect(JSON.stringify(extended2)).toEqual('{"a":true,"b":{"c":10},"d":"test"}');
+    });
+
 });
