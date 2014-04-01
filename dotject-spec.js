@@ -71,4 +71,11 @@ describe("dotject", function() {
         expect(JSON.stringify(extended2)).toEqual('{"a":true,"b":"test"}');
     });
 
+    it("should handle a 'real world' example", function() {
+        var camera = {isEnabled: true};
+        camera = dotject("settings.encoding.format,output.data.base64", camera, "JPEG", true);
+
+        expect(JSON.stringify(camera)).toEqual('{"isEnabled":true,"settings":{"encoding":{"format":"JPEG"}},"output":{"data":{"base64":true}}}');
+    });
+
 });
