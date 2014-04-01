@@ -107,7 +107,7 @@ dotject("a.c", {"a":{"b":{}}});
 
 ### Assign a value
 
-You can assign a value to the "last property":
+You can assign a value to the last nested property:
 
 ```javascript
 dotject("a.b", {}, 10);
@@ -120,9 +120,36 @@ dotject("a.b", {}, 10);
 
 ```
 
-## TODO
+### Assign multiple values
 
-- Assign multiple values
+You can assign a values to the last nested properties:
+
+```javascript
+dotject("a,b.c,d", {}, true, 10, "test");
+
+{
+  "a": true,
+  "b": {
+    "c": 10
+  },
+  "d": "test"
+}
+
+```
+
+### Assign multiple values and override existing
+
+You can assign a values to the last nested properties:
+
+```javascript
+dotject("a,b", {"a": false}, true, "test")
+
+{
+  "a": true,
+  "b": "test"
+}
+
+```
 
 ## License
 
