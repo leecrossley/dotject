@@ -155,6 +155,28 @@ dotject("a,b", {"a": false}, true, "test")
 
 ```
 
+## "Real world" example
+
+```javascript
+var camera = {isEnabled: true};
+camera = dotject("settings.encoding.format,output.data.base64", camera, "JPEG", true);
+
+{
+  "isEnabled": true,
+  "settings": {
+    "encoding": {
+      "format": "JPEG"
+    }
+  },
+  "output": {
+    "data": {
+      "base64": true
+    }
+  }
+}
+
+```
+
 ## License
 
 [MIT License](http://ilee.mit-license.org)
