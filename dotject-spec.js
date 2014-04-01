@@ -65,10 +65,10 @@ describe("dotject", function() {
 
     it("should extend objects with multiple values", function() {
         var extended1 = dotject("b.c", {"a": true}, 10);
-        var extended2 = dotject("b.c,d", {"a": true}, 10, "test");
+        var extended2 = dotject("a,b", {"a": false}, true, "test");
 
         expect(JSON.stringify(extended1)).toEqual('{"a":true,"b":{"c":10}}');
-        expect(JSON.stringify(extended2)).toEqual('{"a":true,"b":{"c":10},"d":"test"}');
+        expect(JSON.stringify(extended2)).toEqual('{"a":true,"b":"test"}');
     });
 
 });
