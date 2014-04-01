@@ -1,5 +1,9 @@
 # dotject [![Build Status](https://travis-ci.org/leecrossley/dotject.png?branch=master)](https://travis-ci.org/leecrossley/dotject) [![npm version](https://badge.fury.io/js/dotject.png)](https://npmjs.org/package/dotject) [![Dependency Status](https://david-dm.org/leecrossley/dotject/status.png)](https://david-dm.org/leecrossley/dotject#info=dependencies)
 
+Dot notation to object. Shortcode your object creation and value assignments to nested objects.
+
+Supports nesting and same level objects, as well as (multiple) value assignment and value overriding of existing objects.
+
 ## Getting started
 
 ### Using npm
