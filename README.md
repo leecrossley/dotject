@@ -4,6 +4,8 @@ Dot notation to object. Shortcode your object creation and value assignments to 
 
 Supports nesting and same level objects, as well as (multiple) value assignment and value overriding of existing objects.
 
+dotject composition is also available as an [atom package](https://github.com/leecrossley/atom-dotject).
+
 ## Getting started
 
 ### Using npm
