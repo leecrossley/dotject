@@ -5,7 +5,7 @@ if (typeof (λ) === "undefined") {
 var dotject = (function () {
     "use strict";
 
-    var addProps = λ.reduce(function (iterator, prop) {
+    var addProps = λ.fold(function (iterator, prop) {
         return (iterator[prop] = iterator[prop] || {});
     });
 
