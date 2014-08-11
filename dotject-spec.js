@@ -2,7 +2,7 @@ describe("dotject", function() {
 
     it("should not be null", function() {
         expect(dotject).not.toBeNull();
-        expect(λ).not.toBeNull();
+        expect(fjs).not.toBeNull();
     });
 
     it("should create objects with nested properties", function() {
