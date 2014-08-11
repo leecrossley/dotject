@@ -1,11 +1,11 @@
-if (typeof (λ) === "undefined") {
-    var λ = require("functional.js");
+if (typeof (fjs) === "undefined") {
+    var fjs = require("functional.js");
 }
 
 var dotject = (function () {
     "use strict";
 
-    var addProps = λ.fold(function (iterator, prop) {
+    var addProps = fjs.fold(function (iterator, prop) {
         return (iterator[prop] = iterator[prop] || {});
     });
 
@@ -19,7 +19,7 @@ var dotject = (function () {
         var lastKey;
         var values = valueArgs(arguments);
 
-        λ.each(function (keys, i) {
+        fjs.each(function (keys, i) {
             keys = keys.split(".");
             lastKey = keys.pop();
             addProps(iterator, keys)[lastKey] = values[i] || {};
