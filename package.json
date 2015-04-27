@@ -3,7 +3,7 @@
   "author": "Lee Crossley <leee@hotmail.co.uk> (http://ilee.co.uk/)",
   "description": "Dot notation to object. Supports nesting and same level objects as well as (multiple) value assignment and value overriding.",
   "homepage": "http://ilee.co.uk",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "main": "dotject.js",
   "keywords": [
     "dot notation",
@@ -24,10 +24,10 @@
     "node": ">= 0.8.x"
   },
   "devDependencies": {
-    "grunt": "~0.4.x",
-    "grunt-contrib-jasmine": "~0.8.x",
-    "grunt-contrib-jshint": "~0.10.x",
-    "grunt-contrib-watch": "~0.6.x"
+    "grunt": "^0.4.0",
+    "grunt-contrib-jasmine": "^0.8.0",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-watch": "^0.6.0"
   },
   "dependencies": {
     "functional.js": "~0.6.x"
