@@ -22,7 +22,6 @@ var dotject = (function () {
         fjs.each(function (keys, i) {
             keys = keys.split(".");
             lastKey = keys.pop();
-            console.log(values[i]);
             var value = (values[i] !== undefined) ? values[i] : {};
             addProps(iterator, keys)[lastKey] = value;
         }, str.split(","));
